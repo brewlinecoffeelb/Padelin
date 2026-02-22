@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reservation | Padelin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="container nav-container">
+    <h2>Padelin</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="training.html">Training</a></li>
+      <li><a href="tournaments.html">Tournaments</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    
+    <h1>Reserve Your Court</h1>
+
+    <div style="display:flex; justify-content:space-between; margin:20px 0;">
+      <button onclick="changeDay(-1)" class="btn-primary">← Previous</button>
+      <h3 id="currentDate"></h3>
+      <button onclick="changeDay(1)" class="btn-primary">Next →</button>
+    </div>
+
+    <table class="booking-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Court 1</th>
+          <th>Court 2</th>
+        </tr>
+      </thead>
+      <tbody id="bookingBody">
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 Padelin | Byblos, Lebanon</p>
+</footer>
+
+<script src="assets/js/reservation.js"></script>
+
+</body>
+</html>
