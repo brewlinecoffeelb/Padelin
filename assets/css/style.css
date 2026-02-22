@@ -52,30 +52,34 @@ button {
 ================================ */
 
 .navbar {
-  background: var(--dark-bg);
+  background: #0f172a;
   padding: 15px 0;
-  color: white;
 }
 
-.navbar .nav-container {
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.navbar ul {
-  list-style: none;
+.logo img {
+  height: 45px;
+}
+
+.nav-links {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  list-style: none;
 }
 
-.navbar a {
+.nav-links a {
   color: white;
-  font-weight: 600;
+  text-decoration: none;
+  font-weight: 500;
 }
 
-.navbar a:hover {
-  color: var(--primary-blue);
+.nav-links a:hover {
+  opacity: 0.7;
 }
 
 /* ================================
