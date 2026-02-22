@@ -335,3 +335,20 @@ table {
 th, td {
   word-wrap: break-word;
 }
+/* ================================
+   RESERVATION TITLE
+================================ */
+
+.reserve-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 40px 0 30px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .reserve-title {
+    font-size: 28px;
+  }
+}
