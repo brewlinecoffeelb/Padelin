@@ -274,3 +274,22 @@ button {
   font-size: 20px;
   font-weight: 700;
 }
+/* ================================
+   MOBILE NAV FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 11px;
+  }
+
+  .logo img {
+    height: 35px;
+  }
+
+}
