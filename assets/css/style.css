@@ -210,3 +210,29 @@ button {
   color: white;
   cursor: not-allowed;
 }
+.date-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.nav-btn {
+  background: #1d3557;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.confirm-btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.navbar {
+  padding: 15px 0;
+}
