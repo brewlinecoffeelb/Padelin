@@ -1,3 +1,7 @@
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 /* ================================
    PADELIN - GLOBAL STYLES
 ================================ */
@@ -48,51 +52,50 @@ button {
 }
 
 /* ================================
-   NAVBAR
+   NAVBAR (CLEAN VERSION)
 ================================ */
 
 .navbar {
-  background: #0f172a;
+  background: var(--dark-bg);
   padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .logo img {
-  height: 45px;
+  height: 40px;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
   list-style: none;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 500;
-}
-
-.nav-links a:hover {
-  opacity: 0.7;
-}
-
-.navbar {
-  background: var(--dark-bg);
-  padding: 18px 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-links a {
-  color: white;
   font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
@@ -100,6 +103,28 @@ button {
   color: var(--primary-blue);
 }
 
+/* ================================
+   MOBILE FIX
+================================ */
+
+@media (max-width: 768px) {
+
+  .nav-container {
+    width: 95%;
+  }
+
+  .logo img {
+    height: 32px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+}
 /* ================================
    HERO SECTION
 ================================ */
@@ -292,4 +317,9 @@ button {
     height: 35px;
   }
 
+}
+header {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
