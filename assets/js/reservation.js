@@ -45,8 +45,22 @@ function generateTable() {
       let row = document.createElement("tr");
 
       let timeCell = document.createElement("td");
-      timeCell.innerText = formatTime(hour, min);
-      row.appendChild(timeCell);
+
+let startTime = formatTime(hour, min);
+
+let nextHour = hour;
+let nextMin = min + 30;
+
+if (nextMin === 60) {
+  nextHour += 1;
+  nextMin = 0;
+}
+
+let endTime = formatTime(nextHour, nextMin);
+
+timeCell.innerText = `${startTime} - ${endTime}`;
+
+row.appendChild(timeCell);
 
       for (let court = 1; court <= 2; court++) {
         let cell = document.createElement("td");
