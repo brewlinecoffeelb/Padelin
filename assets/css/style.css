@@ -1,1 +1,179 @@
+/* ================================
+   PADELIN - GLOBAL STYLES
+================================ */
 
+:root {
+  --primary-blue: #3F6696;
+  --dark-bg: #0f172a;
+  --light-bg: #f8fafc;
+  --gray: #8C8C8C;
+  --danger: #dc2626;
+  --success: #16a34a;
+  --warning: #f59e0b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: #111;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+  background: var(--dark-bg);
+  padding: 15px 0;
+  color: white;
+}
+
+.navbar .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: white;
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  color: var(--primary-blue);
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url('../images/hero.jpg') center/cover no-repeat;
+  color: white;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background: var(--primary-blue);
+  padding: 12px 25px;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #2e4d73;
+}
+
+/* ================================
+   SECTION
+================================ */
+
+.section {
+  padding: 60px 0;
+}
+
+.section-dark {
+  background: var(--dark-bg);
+  color: white;
+}
+
+/* ================================
+   BOOKING TABLE
+================================ */
+
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.slot-available {
+  background-color: white;
+}
+
+.slot-pending {
+  background-color: var(--warning);
+  color: white;
+}
+
+.slot-confirmed {
+  background-color: var(--danger);
+  color: white;
+}
+
+.slot-blocked {
+  background-color: gray;
+  color: white;
+}
+
+.slot-selected {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/* ================================
+   FOOTER
+================================ */
+
+.footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
