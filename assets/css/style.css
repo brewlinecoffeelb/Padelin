@@ -177,3 +177,36 @@ button {
   padding: 40px 0;
   text-align: center;
 }
+.booking-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.booking-table th,
+.booking-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.slot {
+  cursor: pointer;
+  background: #f4f4f4;
+}
+
+.slot:hover {
+  background: #3b6ea8;
+  color: white;
+}
+
+.selected {
+  background: #1d3557 !important;
+  color: white;
+}
+
+.taken {
+  background: #d9534f;
+  color: white;
+  cursor: not-allowed;
+}
