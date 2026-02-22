@@ -99,6 +99,13 @@ function toggleSlot(cell) {
 }
 
 function validateSelection() {
+
+  if (selectedSlots.length === 1) {
+    alert("Minimum booking is 60 minutes (2 consecutive slots).");
+    document.getElementById("confirmBtn").disabled = true;
+    return;
+  }
+
   if (selectedSlots.length < 2) {
     document.getElementById("confirmBtn").disabled = true;
     return;
@@ -125,19 +132,36 @@ function validateSelection() {
 
   document.getElementById("confirmBtn").disabled = !valid;
 }
-
 function confirmBooking() {
+
   if (selectedSlots.length < 2) {
-    alert("Minimum booking is 1 hour.");
+    alert("Minimum booking is 60 minutes.");
     return;
   }
 
   let court = selectedSlots[0].dataset.court;
-  let times = selectedSlots
-    .map(s => s.parentElement.firstChild.innerText)
-    .sort();
 
-  let message = `Hello Padelin!\nI would like to reserve:\nDate: ${formatDate(currentDate)}\nCourt: ${court}\nTime: ${times[0]} - ${times[times.length - 1]}`;
+  // Sort by time properly
+  selectedSlots.sort((a, b) => {
+    return a.dataset.time.localeCompare(b.dataset.time);
+  });
+
+  let firstSlot = selectedSlots[0];
+  let lastSlot = selectedSlots[selectedSlots.length - 1];
+
+  let startText = firstSlot.parentElement.firstChild.innerText.split(" - ")[0];
+  let endText = lastSlot.parentElement.firstChild.innerText.split(" - ")[1];
+
+  let message =
+`Hello 👋
+
+I would like to reserve a court:
+
+📅 Date: ${formatDate(currentDate)}
+🎾 Court: ${court}
+⏰ Time: ${startText} - ${endText}
+
+Thank you!`;
 
   let phone = "96171884882";
   let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
