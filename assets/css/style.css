@@ -352,3 +352,57 @@ th, td {
     font-size: 28px;
   }
 }
+/* ================================
+   RESERVATION TABLE DESIGN
+================================ */
+
+.booking-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto 60px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+th {
+  background: var(--dark-bg);
+  color: white;
+  padding: 14px;
+  font-weight: 600;
+}
+
+td {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover {
+  background: #f8fafc;
+}
+
+.slot {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.slot:hover {
+  background: #e2e8f0;
+}
+
+.selected {
+  background: var(--primary-blue) !important;
+  color: white;
+}
+
+.taken {
+  background: #ddd;
+  cursor: not-allowed;
+}
