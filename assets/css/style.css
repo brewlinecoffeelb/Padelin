@@ -323,3 +323,15 @@ header {
   max-width: 100%;
   overflow: hidden;
 }
+/* ================================
+   TABLE WIDTH FIX
+================================ */
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+th, td {
+  word-wrap: break-word;
+}
