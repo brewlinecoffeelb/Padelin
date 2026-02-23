@@ -53,5 +53,22 @@
   <p>© 2026 Padelin | Byblos, Lebanon</p>
 </footer>
 
+  <script>
+function toggleDropdown(e) {
+  e.preventDefault();
+  const menu = e.target.nextElementSibling;
+  menu.classList.toggle("show");
+}
+
+// Close dropdown if clicking outside
+document.addEventListener("click", function(e) {
+  const dropdown = document.querySelector(".dropdown");
+  if (!dropdown.contains(e.target)) {
+    const menu = dropdown.querySelector(".dropdown-menu");
+    menu.classList.remove("show");
+  }
+});
+</script>
+  
 </body>
 </html>
