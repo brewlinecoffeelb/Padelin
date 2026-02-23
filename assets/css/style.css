@@ -421,8 +421,14 @@ tr:hover {
   }
 }
 /* ================================
-   DROPDOWN MENU
+   DROPDOWN FIXED VERSION
 ================================ */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
 
 .dropdown {
   position: relative;
@@ -430,25 +436,18 @@ tr:hover {
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
+  top: 45px;
   left: 0;
-  background: var(--dark-bg);
+  background: #0f172a;
   list-style: none;
-  padding: 10px 0;
+  padding: 8px 0;
+  margin: 0;
   display: none;
-  min-width: 160px;
+  min-width: 170px;
   border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  z-index: 999;
 }
 
 .dropdown-menu li {
-  padding: 8px 15px;
-}
-
-.dropdown-menu li a {
-  color: white;
-  font-size: 14px;
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
+  padding: 8px 15
