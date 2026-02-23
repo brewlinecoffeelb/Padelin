@@ -406,3 +406,35 @@ tr:hover {
   background: #ddd;
   cursor: not-allowed;
 }
+/* ================================
+   DROPDOWN MENU
+================================ */
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--dark-bg);
+  list-style: none;
+  padding: 10px 0;
+  display: none;
+  min-width: 160px;
+  border-radius: 8px;
+}
+
+.dropdown-menu li {
+  padding: 8px 15px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  font-size: 14px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
