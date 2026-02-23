@@ -406,6 +406,20 @@ tr:hover {
   background: #ddd;
   cursor: not-allowed;
 }
+
+.booking-table th,
+.booking-table td {
+  padding: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .booking-table th,
+  .booking-table td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
 /* ================================
    DROPDOWN MENU
 ================================ */
