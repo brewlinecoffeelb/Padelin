@@ -451,3 +451,8 @@ tr:hover {
 
 .dropdown-menu li {
   padding: 8px 15
+}
+
+.dropdown-menu.show {
+  display: block;
+}
